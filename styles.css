@@ -26,6 +26,7 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
+    min-height: 80px;
 }
 
 .navbar {
@@ -48,7 +49,7 @@ body {
 }
 
 .logo {
-    height: 90px;
+    height: 50px;
     width: auto;
 }
 
@@ -643,7 +644,7 @@ body {
 }
 
 .footer-logo img {
-    height: 70px;
+    height: 40px;
     width: auto;
 }
 
@@ -695,6 +696,30 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header {
+        min-height: 70px;
+    }
+    
+    .navbar {
+        padding: 0.8rem 0;
+    }
+    
+    .nav-logo {
+        gap: 10px;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+    
+    .company-info h2 {
+        font-size: 1.2rem;
+    }
+    
+    .company-info p {
+        font-size: 0.8rem;
+    }
+    
     .hamburger {
         display: flex;
     }
@@ -720,14 +745,29 @@ body {
         margin: 1rem 0;
     }
     
+    .hero {
+        padding: 100px 0 60px;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
+        padding: 0 15px;
     }
     
     .hero-text h1 {
         font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-image img {
+        height: 300px;
     }
     
     .package-content {
@@ -752,12 +792,61 @@ body {
     
     .hero-buttons {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
+    .header {
+        min-height: 65px;
+    }
+    
+    .navbar {
+        padding: 0.6rem 0;
+    }
+    
+    .logo {
+        height: 35px;
+    }
+    
+    .company-info h2 {
+        font-size: 1rem;
+    }
+    
+    .company-info p {
+        font-size: 0.7rem;
+    }
+    
+    .nav-menu {
+        top: 65px;
+    }
+    
+    .hero {
+        padding: 85px 0 50px;
+    }
+    
+    .hero-content {
+        padding: 0 10px;
+    }
+    
     .hero-text h1 {
         font-size: 2rem;
+        line-height: 1.1;
+    }
+    
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+    
+    .hero-image img {
+        height: 250px;
     }
     
     .section-header h2 {
@@ -774,6 +863,10 @@ body {
     
     .contact-form {
         padding: 2rem;
+    }
+    
+    .container {
+        padding: 0 15px;
     }
 }
 
