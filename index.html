@@ -1,547 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Haramain Ziyarat - Umrah, Hajj & Travel Services</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="assets/images/logo.png" alt="Travel Solution Logo" class="logo">
-                    <div class="company-info">
-                        <h2>Al Haramain Ziyarat</h2>
-                        <p>A Division of Travel Solution World Wide Inc.</p>
-                    </div>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#umrah" class="nav-link">Umrah</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#hajj" class="nav-link">Hajj</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#ticketing" class="nav-link">Ticketing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Al Haramain Ziyarat - Hajj, Umrah & Travel Services</title>
+        <!-- Load Tailwind CSS CDN for styling -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            /* Custom Tailwind Configuration */
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary-dark': '#001a4d', /* Deep Navy/Blue */
+                            'accent-gold': '#ffc107', /* Gold/Yellow for highlights */
+                            'secondary-dark': '#0a1930', /* Almost black for background */
+                        },
+                        fontFamily: {
+                            sans: ['Poppins', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-gray-50 font-sans text-gray-800">
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Your Spiritual Journey Begins Here</h1>
-                <p>Experience the sacred pilgrimage of Umrah and Hajj with expert guidance and comprehensive travel services. We are your trusted partner for Islamic travel and worldwide ticketing services.</p>
-                <div class="hero-buttons">
-                    <a href="#umrah" class="btn btn-primary">Explore Umrah Packages</a>
-                    <a href="#contact" class="btn btn-secondary">Get Quote</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="assets/images/kaaba-night.jpg" alt="Kaaba at Night">
-            </div>
-        </div>
-    </section>
+        <!-- NAVIGATION BAR -->
+        <header class="sticky top-0 z-50 bg-primary-dark shadow-xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <!-- Logo/Branding -->
+                    <div class="flex-shrink-0 py-3">
+                        <span class="text-3xl font-extrabold text-white">Al Haramain <span class="text-accent-gold">Ziyarat</span></span>
+                        <p class="text-xs text-gray-400">A Division of Travel Solution World Wide Inc.</p>
+                    </div>
 
-    <!-- Services Overview -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive travel solutions for your spiritual and worldly journeys</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-kaaba"></i>
-                    </div>
-                    <h3>Umrah Services</h3>
-                    <p>Complete Umrah packages with expert religious guidance, premium accommodations, and seamless transportation arrangements.</p>
-                    <ul>
-                        <li>Guided spiritual journeys</li>
-                        <li>5-star accommodations near Haram</li>
-                        <li>Expert religious scholars</li>
-                        <li>Group and individual packages</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mosque"></i>
-                    </div>
-                    <h3>Hajj Services</h3>
-                    <p>Comprehensive Hajj packages designed to provide you with a spiritually fulfilling and comfortable pilgrimage experience.</p>
-                    <ul>
-                        <li>Complete Hajj packages</li>
-                        <li>Experienced guides</li>
-                        <li>Premium accommodations</li>
-                        <li>24/7 support during Hajj</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <h3>Ticketing Services</h3>
-                    <p>Professional ticketing services for all travel destinations worldwide with competitive prices and excellent customer support.</p>
-                    <ul>
-                        <li>Flight bookings worldwide</li>
-                        <li>Competitive pricing</li>
-                        <li>24/7 customer support</li>
-                        <li>Group booking discounts</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Package -->
-    <section id="umrah" class="featured-package">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Umrah Package</h2>
-                <p>Umrah with Turkey Side Tour - A Spiritual and Cultural Journey</p>
-            </div>
-            <div class="package-content">
-                <div class="package-info">
-                    <div class="package-header">
-                        <h3>Umrah with Turkey Side Tour</h3>
-                        <div class="package-price">
-                            <span class="price">$2989</span>
-                            <span class="per-person">per person</span>
-                        </div>
-                    </div>
-                    <div class="package-dates">
-                        <i class="fas fa-calendar"></i>
-                        <span>October 8 to October 20, 2025</span>
-                    </div>
-                    <div class="package-details">
-                        <h4>Package Includes:</h4>
-                        <ul>
-                            <li><i class="fas fa-check"></i> One Jummah in Makkah & One Jummah in Madinah</li>
-                            <li><i class="fas fa-check"></i> 5-star accommodations near Haram (Pullman Zamzam or similar)</li>
-                            <li><i class="fas fa-check"></i> 4-5 star hotel accommodations in Turkey</li>
-                            <li><i class="fas fa-check"></i> International airfare and ground transportation</li>
-                            <li><i class="fas fa-check"></i> Guided Ziyarat tours with religious scholars</li>
-                            <li><i class="fas fa-check"></i> Complimentary daily breakfast</li>
-                            <li><i class="fas fa-check"></i> Visit to Blue Mosques & Prophet Mohammed (SAW) belongings</li>
-                            <li><i class="fas fa-check"></i> Topkapi Palace Museum tour</li>
+                    <!-- Desktop Menu Links -->
+                    <nav class="hidden md:block">
+                        <ul class="ml-10 flex items-baseline space-x-6">
+                            <li><a href="#home" class="text-white hover:text-accent-gold px-3 py-2 rounded-md text-lg font-medium transition duration-150">Home</a></li>
+                            <li><a href="#umrah" class="text-white hover:text-accent-gold px-3 py-2 rounded-md text-lg font-medium transition duration-150">Umrah</a></li>
+                            <li><a href="#hajj" class="text-white hover:text-accent-gold px-3 py-2 rounded-md text-lg font-medium transition duration-150">Hajj 2026</a></li>
+                            <li><a href="#services" class="text-white hover:text-accent-gold px-3 py-2 rounded-md text-lg font-medium transition duration-150">Services</a></li>
+                            <li><a href="#about" class="text-white hover:text-accent-gold px-3 py-2 rounded-md text-lg font-medium transition duration-150">About Us</a></li>
+                            <li><a href="#contact" class="bg-accent-gold text-primary-dark font-bold py-2 px-4 rounded-full shadow-lg hover:bg-yellow-400 transition duration-150">Register</a></li>
                         </ul>
-                    </div>
-                    <div class="package-guidance">
-                        <h4>Religious Guidance:</h4>
-                        <div class="scholars">
-                            <div class="scholar">
-                                <strong>Toronto Group:</strong> Moulana Kasim Ingar<br>
-                                <small>Imam of Abu Bakr Masjid, Scarborough (SMA)</small>
-                            </div>
-                            <div class="scholar">
-                                <strong>Edmonton Group:</strong> Moulana Muhammad Patel<br>
-                                <small>Imam of Al Falah Centre, Edmonton (ICNA)</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="package-note">
-                        <p><strong>Note:</strong> Pricing based on departure from Toronto. Connecting flights available from Edmonton, Calgary, and Vancouver. Saudi Visa Fee ($199 extra for Canadian passport holders without existing visa).</p>
-                    </div>
-                </div>
-                <div class="package-images">
-                    <div class="image-gallery">
-                        <img src="assets/images/kaaba-day.jpg" alt="Kaaba during day" class="gallery-image">
-                        <img src="assets/images/madinah-mosque.png" alt="Madinah Mosque" class="gallery-image">
-                        <img src="assets/images/blue-mosque-turkey.jpg" alt="Blue Mosque Turkey" class="gallery-image">
+                    </nav>
+
+                    <!-- Mobile Menu Button (Hamburger) -->
+                    <div class="md:hidden">
+                        <button id="menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                            <!-- Icon paths for accessibility -->
+                            <svg class="h-6 w-6" id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                            <svg class="h-6 w-6 hidden" id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Why Choose Us -->
-    <section id="about" class="why-choose-us">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose Al Haramain Ziyarat?</h2>
-                <p>Your trusted partner for spiritual journeys and travel services</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Trusted Experience</h3>
-                    <p>As a division of Travel Solution World Wide Inc., we bring years of expertise in Islamic travel and worldwide ticketing services.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Expert Religious Guidance</h3>
-                    <p>Our packages include guidance from experienced Islamic scholars and imams to enhance your spiritual journey.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Premium Accommodations</h3>
-                    <p>We provide 5-star accommodations near the Haram for maximum comfort and convenience during your pilgrimage.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>24/7 Support</h3>
-                    <p>Our dedicated customer support team is available around the clock to assist you throughout your journey.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <h3>Competitive Pricing</h3>
-                    <p>We offer comprehensive packages at competitive prices with transparent pricing and no hidden fees.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Worldwide Services</h3>
-                    <p>Beyond Islamic travel, we provide ticketing services for all global destinations with excellent customer service.</p>
+            <!-- Mobile Menu (Hidden by default) -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#home" class="text-white hover:text-accent-gold block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a href="#umrah" class="text-white hover:text-accent-gold block px-3 py-2 rounded-md text-base font-medium">Umrah</a>
+                    <a href="#hajj" class="text-white hover:text-accent-gold block px-3 py-2 rounded-md text-base font-medium">Hajj 2026</a>
+                    <a href="#services" class="text-white hover:text-accent-gold block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                    <a href="#about" class="text-white hover:text-accent-gold block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                    <a href="#contact" class="bg-accent-gold text-primary-dark font-bold block py-2 px-4 rounded-lg text-center mt-2">Register Now</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Hajj Section -->
-    <section id="hajj" class="hajj-section">
-       <section class="min-h-screen py-16 px-4 sm:px-6 lg:px-8 bg-primary-dark text-white">
-        <div class="max-w-7xl mx-auto">
-
-            <!-- Header & Main CTA -->
-            <header class="text-center mb-16">
-                <p class="text-accent-gold text-2xl font-extrabold tracking-widest uppercase mb-2">Travel Solution Worldwide Inc.</p>
-                <h1 class="text-6xl sm:text-7xl lg:text-8xl font-black mb-4 leading-tight tracking-tighter">
-                    HAJJ <span class="text-accent-gold">2026</span>
+        <!-- 1. HERO SECTION -->
+        <section id="home" class="relative bg-primary-dark text-white py-24 sm:py-32 lg:py-40 border-b-8 border-accent-gold">
+            <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://placehold.co/1920x1080/000000/ffffff?text=Kaaba+Abstract');"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black mb-4 leading-tight tracking-tighter">
+                    Your Journey to <span class="text-accent-gold">Makkah & Madinah</span>
                 </h1>
-                <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto">
-                    Perform Your Hajj with Suhail Ajmeri's **Al Haramain Ziyarat**
+                <p class="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-10">
+                    Offering spiritually enriching and expertly guided Hajj, Umrah, and Ziyarat packages from Canada.
                 </p>
-                <div class="mt-8 p-4 bg-secondary-dark rounded-xl shadow-2xl border-b-4 border-accent-gold inline-block">
-                    <p class="text-3xl font-bold text-accent-gold">Nusuk Registration is open Now!</p>
-                </div>
-                <div class="mt-4 text-center text-sm text-gray-400">
-                    <p>Since 2015, over 1000+ people have performed Umrah & Hajj with us.</p>
-                </div>
-            </header>
-
-            <!-- Spiritual Guide Section -->
-            <div class="mb-16">
-                <h2 class="text-4xl font-bold text-center mb-10 text-accent-gold uppercase tracking-wider">Our Spiritual Guides</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6">
-                    <!-- Guide 1 -->
-                    <div class="text-center">
-                        <div class="mx-auto w-24 h-24 rounded-full guide-placeholder flex items-center justify-center mb-3">
-                            <svg class="w-12 h-12 text-accent-gold" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        </div>
-                        <p class="font-semibold text-lg">Qari Nouman</p>
-                        <p class="text-sm text-gray-400">(Scarborough Muslim Association)</p>
-                    </div>
-
-                    <!-- Guide 2 -->
-                    <div class="text-center">
-                        <div class="mx-auto w-24 h-24 rounded-full guide-placeholder flex items-center justify-center mb-3">
-                             <svg class="w-12 h-12 text-accent-gold" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        </div>
-                        <p class="font-semibold text-lg">Molana Anwar Patel</p>
-                        <p class="text-sm text-gray-400">(Masjid E Quba, Ajax)</p>
-                    </div>
-
-                    <!-- Guide 3 -->
-                    <div class="text-center">
-                        <div class="mx-auto w-24 h-24 rounded-full guide-placeholder flex items-center justify-center mb-3">
-                             <svg class="w-12 h-12 text-accent-gold" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        </div>
-                        <p class="font-semibold text-lg">Mufti Adam Koya</p>
-                        <p class="text-sm text-gray-400">(Jamia Qasimul Uloom Toronto)</p>
-                    </div>
-
-                    <!-- Guide 4 -->
-                    <div class="text-center">
-                        <div class="mx-auto w-24 h-24 rounded-full guide-placeholder flex items-center justify-center mb-3">
-                             <svg class="w-12 h-12 text-accent-gold" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        </div>
-                        <p class="font-semibold text-lg">Mufti Dr Ismail Qadri</p>
-                        <p class="text-sm text-gray-400">(Edmonton, AB)</p>
-                    </div>
-
-                     <!-- Guide 5 -->
-                    <div class="text-center">
-                        <div class="mx-auto w-24 h-24 rounded-full guide-placeholder flex items-center justify-center mb-3">
-                             <svg class="w-12 h-12 text-accent-gold" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        </div>
-                        <p class="font-semibold text-lg">Mufti Ahmed Yusuf</p>
-                        <p class="text-sm text-gray-400">(Edmonton, AB)</p>
-                    </div>
-
-                    <!-- Guide 6 -->
-                    <div class="text-center">
-                        <div class="mx-auto w-24 h-24 rounded-full guide-placeholder flex items-center justify-center mb-3">
-                             <svg class="w-12 h-12 text-accent-gold" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        </div>
-                        <p class="font-semibold text-lg">Molana Osama Raja</p>
-                        <p class="text-sm text-gray-400">(Calgary, AB)</p>
-                    </div>
-
-                    <!-- Guide 7 -->
-                    <div class="text-center">
-                        <div class="mx-auto w-24 h-24 rounded-full guide-placeholder flex items-center justify-center mb-3">
-                             <svg class="w-12 h-12 text-accent-gold" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        </div>
-                        <p class="font-semibold text-lg">Molana OmarMultani</p>
-                        <p class="text-sm text-gray-400">(Montreal, QC)</p>
-                    </div>
-
-                    <!-- Guide 8 -->
-                    <div class="text-center">
-                        <div class="mx-auto w-24 h-24 rounded-full guide-placeholder flex items-center justify-center mb-3">
-                             <svg class="w-12 h-12 text-accent-gold" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        </div>
-                        <p class="font-semibold text-lg">Mufti Anees Wahab</p>
-                        <p class="text-sm text-gray-400">(Vancouver, BC)</p>
-                    </div>
-
+                <a href="#contact" class="inline-block bg-accent-gold text-primary-dark font-extrabold text-xl sm:text-2xl py-4 px-10 rounded-full shadow-2xl hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                    Start Your Journey Now
+                </a>
+                <div class="mt-8 text-lg text-gray-400">
+                    <p>Trusted by the Canadian Muslim community since 2015.</p>
                 </div>
             </div>
-
-            <!-- Contact and Registration Details -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center">
-
-                <!-- 1. Al Haramain Ziyarat Info -->
-                <div class="p-6 bg-secondary-dark rounded-xl shadow-lg border-t-4 border-accent-gold">
-                    <h3 class="text-2xl font-bold mb-3 text-accent-gold">Al Haramain Ziyarat</h3>
-                    <p class="text-gray-300 mb-2">(A Division of Travel Solution Worldwide Inc.)</p>
-                    <address class="not-italic text-sm text-gray-400">
-                        Travel Solution Worldwide Inc.<br>
-                        3244 16 Ave NW, Edmonton, AB -T6T 0T8
-                    </address>
-                </div>
-
-                <!-- 2. Call & WhatsApp -->
-                <div class="p-6 bg-secondary-dark rounded-xl shadow-lg border-t-4 border-accent-gold">
-                    <h3 class="text-2xl font-bold mb-3 text-accent-gold">Contact Us</h3>
-                    <p class="text-xl font-bold mb-1">Call: <span class="text-accent-gold">1 877 749 7440</span></p>
-                    <div class="mt-4">
-                        <p class="text-lg font-semibold text-gray-300">WhatsApp Only:</p>
-                        <p>Saurin (Suhail) Ajmeri: <a href="tel:7808038076" class="text-accent-gold hover:underline">780-803-8076</a></p>
-                        <p>Moulana Muhammad Patel: <a href="tel:7056189566" class="text-accent-gold hover:underline">705-618-9566</a></p>
-                    </div>
-                </div>
-
-                <!-- 3. Registration Link & Email -->
-                <div class="p-6 bg-secondary-dark rounded-xl shadow-lg border-t-4 border-accent-gold">
-                    <h3 class="text-2xl font-bold mb-3 text-accent-gold">Register & Inquire</h3>
-                    <a href="https://www.alharamainziyarat.com" target="_blank" class="block bg-accent-gold text-primary-dark font-bold py-3 px-6 rounded-lg shadow-md hover:bg-yellow-400 transition duration-300 mb-4">
-                        Register at www.AlHaramainZiyarat.com
-                    </a>
-                    <p class="text-gray-300">Phone: 1 (877) 749 7440, 780 666 2126</p>
-                    <p class="text-sm text-gray-300 mt-1">Email: <a href="mailto:admin@travelsolution.ca" class="text-accent-gold hover:underline">admin@travelsolution.ca</a></p>
-                </div>
-            </div>
-
-            <!-- Note about QR Code / Social Media -->
-             <div class="mt-12 text-center text-gray-400">
-                <p class="text-lg">Scan the Code to Join the Group for latest Hajj information (As seen in the flyer)</p>
-                <div class="mt-2 text-sm">
-                    <!-- Placeholder for QR Code / Social Media Link -->
-                    <p>
-                        <a href="#" class="text-accent-gold hover:underline">Click here to find our Social Media Group link</a>
-                    </p>
-                </div>
-            </div>
-        </div>
         </section>
 
-    <!-- Ticketing Section -->
-    <section id="ticketing" class="ticketing-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Worldwide Ticketing Services</h2>
-                <p>Professional flight booking services for all your travel needs</p>
-            </div>
-            <div class="ticketing-content">
-                <div class="ticketing-features">
-                    <div class="ticketing-feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-plane-departure"></i>
-                        </div>
-                        <h3>Global Destinations</h3>
-                        <p>Book flights to any destination worldwide with our comprehensive ticketing services.</p>
-                    </div>
-                    <div class="ticketing-feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-tags"></i>
-                        </div>
-                        <h3>Best Prices</h3>
-                        <p>We offer competitive pricing and work with multiple airlines to get you the best deals.</p>
-                    </div>
-                    <div class="ticketing-feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>24/7 Service</h3>
-                        <p>Our customer service team is available around the clock to assist with your bookings.</p>
-                    </div>
-                    <div class="ticketing-feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-users-cog"></i>
-                        </div>
-                        <h3>Group Bookings</h3>
-                        <p>Special rates and services available for group bookings and corporate travel.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- 2. UMRAH PACKAGES SECTION -->
+        <section id="umrah" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 text-secondary-dark">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-4xl font-extrabold mb-12 uppercase tracking-wider text-primary-dark">Umrah Packages (Year-Round)</h2>
+                <p class="text-xl text-gray-600 mb-12 max-w-4xl mx-auto">
+                    Flexible packages tailored to your schedule and comfort, ensuring a focus on worship.
+                </p>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Us</h2>
-                <p>Get in touch for bookings, inquiries, or more information</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <h3>Toronto Office</h3>
-                        <div class="contact-detail">
-                            <i class="fas fa-user"></i>
-                            <span>Saurin (Suhail) Ajmeri</span>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fas fa-phone"></i>
-                            <span>780-803-8076</span>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>WhatsApp Available</span>
-                        </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Package 1: Economic -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-accent-gold transition duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                        <i class="fa-solid fa-bed text-4xl text-accent-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-primary-dark">Economy</h3>
+                        <p class="text-gray-500 mb-4">10 Days | 3-Star Hotels</p>
+                        <p class="text-primary-dark font-semibold text-sm">Flights and visa assistance included. Focus on spirituality.</p>
                     </div>
-                    <div class="contact-card">
-                        <h3>Edmonton Office</h3>
-                        <div class="contact-detail">
-                            <i class="fas fa-user"></i>
-                            <span>Moulana Muhammad Patel</span>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fas fa-phone"></i>
-                            <span>705-618-9566</span>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>WhatsApp Available</span>
-                        </div>
+                    <!-- Package 2: Standard -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-accent-gold transition duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                        <i class="fa-solid fa-star text-4xl text-accent-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-primary-dark">Standard</h3>
+                        <p class="text-gray-500 mb-4">14 Days | 4-Star Hotels (Near Haram)</p>
+                        <p class="text-primary-dark font-semibold text-sm">Closer proximity and organized Ziyarat (Holy Sites visits).</p>
+                    </div>
+                    <!-- Package 3: Premium -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-accent-gold transition duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                        <i class="fa-solid fa-crown text-4xl text-accent-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-primary-dark">Premium</h3>
+                        <p class="text-gray-500 mb-4">21 Days | 5-Star Hotels</p>
+                        <p class="text-primary-dark font-semibold text-sm">Extended stay, full board options, and luxury transport.</p>
+                    </div>
+                    <!-- Package 4: Custom Group -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-accent-gold transition duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                        <i class="fa-solid fa-users text-4xl text-accent-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-primary-dark">Group/Custom</h3>
+                        <p class="text-gray-500 mb-4">Flexible Dates | Custom Itinerary</p>
+                        <p class="text-primary-dark font-semibold text-sm">Special rates for families, masajid, and community groups.</p>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <h3>Send us a Message</h3>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" placeholder="Your Phone">
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="">Select Service</option>
-                                <option value="umrah">Umrah Package</option>
-                                <option value="hajj">Hajj Package</option>
-                                <option value="ticketing">Flight Ticketing</option>
-                                <option value="other">Other Inquiry</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="assets/images/logo.png" alt="Travel Solution Logo">
-                        <div>
-                            <h3>Al Haramain Ziyarat</h3>
-                            <p>A Division of Travel Solution World Wide Inc.</p>
+                <a href="#contact" class="inline-block mt-12 bg-primary-dark text-white font-bold text-lg py-3 px-8 rounded-full shadow-lg hover:bg-secondary-dark transition duration-300">
+                    Inquire About Umrah
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. HAJJ 2026 SECTION -->
+        <section id="hajj" class="py-20 px-4 sm:px-6 lg:px-8 bg-secondary-dark text-white">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-4xl font-extrabold mb-4 uppercase tracking-wider text-accent-gold">
+                    Hajj 2026 Packages
+                </h2>
+                <p class="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+                    Secure your place for the journey of a lifetime. Nusuk registration is now open!
+                </p>
+
+                <div class="grid lg:grid-cols-3 gap-10">
+
+                    <!-- Package 1: Emerald (Economy Premium) -->
+                    <div class="p-8 bg-primary-dark rounded-xl shadow-2xl border-t-8 border-accent-gold flex flex-col">
+                        <h3 class="text-3xl font-bold text-accent-gold mb-2">Emerald</h3>
+                        <p class="text-lg text-gray-400 mb-4">Affordable, Comprehensive Hajj</p>
+
+                        <ul class="space-y-3 text-gray-200 text-base flex-grow text-left">
+                            <li class="flex items-start"><i class="fa-solid fa-hotel text-accent-gold mr-3 mt-1"></i> 4-Star Hotels in Makkah/Madinah</li>
+                            <li class="flex items-start"><i class="fa-solid fa-campground text-accent-gold mr-3 mt-1"></i> European Tents in Mina & Arafat</li>
+                            <li class="flex items-start"><i class="fa-solid fa-plane text-accent-gold mr-3 mt-1"></i> Flights & Ground Transport Included</li>
+                            <li class="flex items-start"><i class="fa-solid fa-book-open text-accent-gold mr-3 mt-1"></i> Scholar Guidance & Hajj Preparation</li>
+                        </ul>
+                        <a href="#contact" class="mt-6 block text-center bg-accent-gold text-primary-dark font-extrabold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-300">
+                            Inquire Price
+                        </a>
+                    </div>
+
+                    <!-- Package 2: Platinum (Recommended) -->
+                    <div class="p-8 bg-white text-primary-dark rounded-xl shadow-2xl border-t-8 border-primary-dark flex flex-col scale-105">
+                        <h3 class="text-3xl font-bold text-primary-dark mb-2">Platinum <span class="text-accent-gold text-lg">(Most Popular)</span></h3>
+                        <p class="text-lg text-gray-600 font-semibold mb-4">High Comfort, Optimal Proximity</p>
+
+                        <ul class="space-y-3 text-secondary-dark text-base flex-grow text-left">
+                            <li class="flex items-start"><i class="fa-solid fa-hotel text-accent-gold mr-3 mt-1"></i> 5-Star Hotels (Closest to Haram)</li>
+                            <li class="flex items-start"><i class="fa-solid fa-campground text-accent-gold mr-3 mt-1"></i> Upgraded Services in Mina/Arafat</li>
+                            <li class="flex items-start"><i class="fa-solid fa-utensils text-accent-gold mr-3 mt-1"></i> Half-Board Meals (Breakfast/Dinner)</li>
+                            <li class="flex items-start"><i class="fa-solid fa-car-side text-accent-gold mr-3 mt-1"></i> VIP Ground Transportation</li>
+                        </ul>
+                        <a href="#contact" class="mt-6 block text-center bg-primary-dark text-white font-extrabold py-3 px-6 rounded-lg hover:bg-secondary-dark transition duration-300">
+                            View Details
+                        </a>
+                    </div>
+
+                    <!-- Package 3: Royal (VIP Luxury) -->
+                    <div class="p-8 bg-primary-dark rounded-xl shadow-2xl border-t-8 border-accent-gold flex flex-col">
+                        <h3 class="text-3xl font-bold text-accent-gold mb-2">Royal</h3>
+                        <p class="text-lg text-gray-400 mb-4">Exclusive Luxury Service</p>
+
+                        <ul class="space-y-3 text-gray-200 text-base flex-grow text-left">
+                            <li class="flex items-start"><i class="fa-solid fa-hotel text-accent-gold mr-3 mt-1"></i> Fairmont/Raffles Equivalent Hotels</li>
+                            <li class="flex items-start"><i class="fa-solid fa-campground text-accent-gold mr-3 mt-1"></i> Private/Semi-Private Mina Tents</li>
+                            <li class="flex items-start"><i class="fa-solid fa-utensils text-accent-gold mr-3 mt-1"></i> Full-Board Gourmet Meals</li>
+                            <li class="flex items-start"><i class="fa-solid fa-plane-departure text-accent-gold mr-3 mt-1"></i> Business Class Flights (where available)</li>
+                        </ul>
+                        <a href="#contact" class="mt-6 block text-center bg-accent-gold text-primary-dark font-extrabold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-300">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hajj CTA -->
+                <div class="text-center p-8 bg-primary-dark rounded-xl shadow-2xl border-b-8 border-accent-gold mt-16">
+                    <p class="text-3xl font-extrabold text-white mb-4">Packages are highly limited. Contact us today!</p>
+                    <a href="#contact" class="inline-block bg-accent-gold text-primary-dark font-bold text-lg py-3 px-8 rounded-lg shadow-md hover:bg-yellow-400 transition duration-300">
+                        Get Pricing & Availability
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SERVICES SECTION (Ticketing, Consultation) -->
+        <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 text-primary-dark">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-4xl font-extrabold mb-12 uppercase tracking-wider text-secondary-dark">Beyond Hajj & Umrah</h2>
+                <p class="text-xl text-gray-600 mb-12 max-w-4xl mx-auto">
+                    As a full-service agency, we assist with all aspects of your international travel needs.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1: Flight Ticketing -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-b-4 border-primary-dark">
+                        <i class="fa-solid fa-ticket text-4xl text-accent-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-3">Flight Ticketing</h3>
+                        <p class="text-gray-600">Secure the best routes and fares for travel worldwide, leveraging our IATA accreditation.</p>
+                    </div>
+                    <!-- Service 2: Travel Insurance -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-b-4 border-primary-dark">
+                        <i class="fa-solid fa-briefcase-medical text-4xl text-accent-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-3">Travel Insurance</h3>
+                        <p class="text-gray-600">Essential coverage for peace of mind during your spiritual and leisure trips.</p>
+                    </div>
+                    <!-- Service 3: Consultation -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-b-4 border-primary-dark">
+                        <i class="fa-solid fa-headset text-4xl text-accent-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold mb-3">Travel Consultation</h3>
+                        <p class="text-gray-600">Expert advice on visa requirements, itinerary planning, and destination specifics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ABOUT US / LICENSING -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-primary-dark text-white">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-4xl font-extrabold mb-12 uppercase tracking-wider text-accent-gold">Who We Are</h2>
+                <div class="grid lg:grid-cols-2 gap-12 items-center text-left">
+                    <!-- Mission Statement -->
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">Our Commitment</h3>
+                        <p class="text-lg text-gray-300 mb-6">
+                            Al Haramain Ziyarat, a proud division of Travel Solution World Wide Inc., is dedicated to facilitating spiritually rewarding journeys for the Canadian Muslim community. We combine professional travel logistics with authentic religious guidance.
+                        </p>
+                        <p class="text-lg text-gray-300 font-semibold border-l-4 border-accent-gold pl-4 italic">
+                            "Your trust is our greatest responsibility."
+                        </p>
+                    </div>
+
+                    <!-- Credentials/Accreditations -->
+                    <div class="p-8 bg-secondary-dark rounded-xl shadow-2xl">
+                        <h3 class="text-3xl font-bold mb-6 text-accent-gold">Accreditation & Trust</h3>
+                        <div class="space-y-4 text-gray-200">
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-check-circle w-6 h-6 mr-3 text-accent-gold"></i>
+                                <span class="text-xl font-semibold">IATA Accredited Travel Agency</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-check-circle w-6 h-6 mr-3 text-accent-gold"></i>
+                                <span class="text-xl font-semibold">Serving Since 2015 (10+ Years Experience)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-check-circle w-6 h-6 mr-3 text-accent-gold"></i>
+                                <span class="text-xl font-semibold">Trusted by over 1000+ pilgrims</span>
+                            </div>
                         </div>
                     </div>
-                    <p>Your trusted partner for spiritual journeys and worldwide travel services.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#umrah">Umrah Packages</a></li>
-                        <li><a href="#hajj">Hajj Services</a></li>
-                        <li><a href="#ticketing">Flight Ticketing</a></li>
-                        <li><a href="#contact">Travel Consultation</a></li>
+            </div>
+        </section>
+
+        <!-- 6. FOOTER/CONTACT SECTION -->
+        <footer id="contact" class="bg-secondary-dark py-12 px-4 sm:px-6 lg:px-8 text-white border-t-8 border-accent-gold">
+            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
+
+                <!-- Company Info -->
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-bold mb-4 text-accent-gold">Al Haramain Ziyarat</h3>
+                    <p class="text-sm text-gray-400 mb-2">A Division of Travel Solution World Wide Inc.</p>
+                    <address class="not-italic text-sm text-gray-400">
+                        3244 16 Ave NW, Edmonton, AB -T6T 0T8
+                    </address>
+                    <p class="text-sm text-gray-400 mt-2">
+                        Email: <a href="mailto:admin@travelsolution.ca" class="hover:text-accent-gold transition duration-150">admin@travelsolution.ca</a>
+                    </p>
+                </div>
+
+                <!-- Contact Numbers -->
+                <div class="md:col-span-1">
+                    <h3 class="text-2xl font-bold mb-4 text-accent-gold">Contact Info</h3>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p class="text-white font-semibold">Toll-Free: 1 877 749 7440</p>
+                        <p><strong>Toronto:</strong> <a href="tel:7808038076" class="text-accent-gold hover:underline">780-803-8076</a> (Suhail Ajmeri)</p>
+                        <p><strong>Edmonton:</strong> <a href="tel:7056189566" class="text-accent-gold hover:underline">705-618-9566</a> (Moulana Patel)</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="md:col-span-1">
+                    <h3 class="text-2xl font-bold mb-4 text-accent-gold">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition duration-150">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition duration-150">About Us</a></li>
+                        <li><a href="#umrah" class="hover:text-white transition duration-150">Umrah Packages</a></li>
+                        <li><a href="#hajj" class="hover:text-white transition duration-150">Hajj Services</a></li>
+                        <li><a href="#services" class="hover:text-white transition duration-150">Other Services</a></li>
+                        <li><a href="https://www.alharamainziyarat.com" target="_blank" class="hover:text-white transition duration-150">Online Registration</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <div class="footer-contact">
-                        <p><strong>Toronto:</strong> 780-803-8076</p>
-                        <p><strong>Edmonton:</strong> 705-618-9566</p>
-                        <p>Call/WhatsApp Available</p>
-                    </div>
+
+                <!-- Social/WhatsApp Link -->
+                <div class="md:col-span-1">
+                    <h3 class="text-2xl font-bold mb-4 text-accent-gold">Stay Connected</h3>
+                    <a href="#" class="inline-block bg-primary-dark text-white font-bold py-2 px-4 rounded-full shadow-lg hover:bg-primary-dark/80 transition duration-150">
+                        <i class="fa-brands fa-whatsapp mr-2"></i> Join WhatsApp Group
+                    </a>
+                    <p class="text-sm text-gray-400 mt-3">Follow us for real-time Hajj & Umrah updates.</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Al Haramain Ziyarat - A Division of Travel Solution World Wide Inc. All rights reserved.</p>
+
+            <!-- Copyright -->
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+                &copy; <span id="current-year">2025</span> Al Haramain Ziyarat - A Division of Travel Solution World Wide Inc. All rights reserved.
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
+        <script>
+            // JavaScript for mobile menu toggle and setting current year
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIconOpen = document.getElementById('menu-icon-open');
+            const menuIconClose = document.getElementById('menu-icon-close');
 
+            menuButton.addEventListener('click', () => {
+                const isExpanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+                menuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                menuIconOpen.classList.toggle('hidden');
+                menuIconClose.classList.toggle('hidden');
+            });
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+    </body>
+    </html>
