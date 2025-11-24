@@ -49,7 +49,13 @@ body {
 }
 
 .logo {
-    height: 50px;
+    /*
+     * Increase the size of the company logo in the header so it is easier to read.
+     * The height was previously set to 50px which made the logo appear small on
+     * larger screens. Bumping this up to 70px (and letting the width scale
+     * proportionally) improves legibility while preserving the aspect ratio.
+     */
+    height: 70px;
     width: auto;
 }
 
@@ -290,6 +296,22 @@ body {
     padding: 80px 0;
     background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%);
     color: #fff;
+}
+
+/*
+ * Improve readability of the "Featured Umrah Package" section on the green
+ * background. The default section header styles use a dark green colour
+ * intended for light backgrounds, which makes the heading and subheading
+ * difficult to see here. Override those colours within the context of the
+ * featured package to provide sufficient contrast: the main heading becomes
+ * our accent yellow and the subheading text is white.
+ */
+.featured-package .section-header h2 {
+    color: #ffd700;
+}
+
+.featured-package .section-header p {
+    color: #ffffff;
 }
 
 .package-content {
@@ -636,26 +658,19 @@ body {
     margin-bottom: 2rem;
 }
 
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.footer-company-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4a9eff;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.footer-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #b8e6d1;
     margin-bottom: 1rem;
-}
-
-.footer-logo img {
-    height: 40px;
-    width: auto;
-}
-
-.footer-logo h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.footer-logo p {
-    font-size: 0.9rem;
-    opacity: 0.8;
 }
 
 .footer-section h4 {
@@ -681,6 +696,28 @@ body {
 
 .footer-section a:hover {
     color: #ffd700;
+}
+
+.associations-text {
+    color: #b8e6d1;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.association-logos {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.association-logo-img {
+    height: 40px;
+    width: auto;
+    background: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .footer-contact p {
@@ -887,3 +924,139 @@ html {
     transform: translateY(0);
 }
 
+
+/* Package Registration Button */
+.package-registration {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+.package-register-btn {
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    color: #1a5f3f;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.package-register-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.registration-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Mobile responsiveness for registration button */
+@media (max-width: 768px) {
+    .package-register-btn {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .package-register-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+
+/* New Hajj Section Styles for Spiritual Guides */
+.spiritual-guide-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.spiritual-guide-section .section-header {
+    margin-bottom: 2rem;
+}
+
+.spiritual-guide-section .section-header h3 {
+    font-size: 1.8rem;
+    color: #1a5f3f;
+}
+
+.spiritual-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    /* Ensure the grid is applied */
+    grid-auto-rows: 1fr; 
+}
+
+.guide-card {
+    padding: 1rem;
+    border-radius: 10px;
+    background: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.guide-silhouette {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc; /* Placeholder for the silhouette image */
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.guide-card p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #333;
+    /* Ensure text is centered within the card */
+    text-align: center;
+}
+
+.guide-card strong {
+    font-weight: 600;
+    color: #1a5f3f;
+}
+
+.hajj-note {
+    background: #f8fffe;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #ffd700;
+    margin-top: 2rem;
+}
+
+.hajj-note p {
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 1rem;
+}
+
+.hajj-note strong {
+    color: #1a5f3f;
+}
+
+/* Responsive adjustments for Hajj section */
+@media (max-width: 768px) {
+    .hajj-content {
+        grid-template-columns: 1fr;
+    }
+    .hajj-image {
+        order: -1; /* Move image above text on mobile */
+    }
+    .spiritual-guide-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
